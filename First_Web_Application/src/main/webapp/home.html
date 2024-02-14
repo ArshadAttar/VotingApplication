@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Email Verification </title>
+<link
+	href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
+	rel='stylesheet'>
+<link href='' rel='stylesheet'>
+<script type='text/javascript'
+	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<style>
+
+body {
+	background-position: center;
+	background-color: #90EE90;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: black;
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.5;
+	text-transform: none;
+	margin-bottom: 90px;
+}
+
+.forgot {
+	background-color: #fff;
+	padding-left: 40px;
+	;
+}
+p{
+	font-weight: bold;
+	}
+
+.btn {
+	font-size: 18px;
+	color: black;
+}
+
+.form-control:focus {
+	color: black;
+	background-color: #fff;
+	border-color: #76b7e9;
+	outline: 0;
+	box-shadow: 0 0 0 0px #28a745
+}
+.forgot{
+	border-radius: 15px;
+	box-shadow: 0 10px 20px black;
+	padding-bottom: 20px;
+}
+.card{
+	
+	box-shadow: 0 10px 20px black;
+}
+
+nav{
+  background: black;
+  height: 80px;
+  width: 100%;
+}
+.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+  font-family: serif;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #FF8C00;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+   font-weight: bolder;
+}
+a.active,a:hover{
+  background: #FFF8DC;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width:952px){
+  .logo{
+    font-size: 30px;
+    padding-left: 50px;
+ 
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+</style>
+</head>
+<nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+       <i class="fas fa-align-justify"></i>
+      </label>
+      <label class="logo">Voters Portal</label>
+      <ul>
+        <li><a href="index.html">Home Page</a></li>
+      </ul>
+    </nav>
+<body oncontextmenu='return false' class='snippet-body'>
+	<div class="container padding-bottom-3x mb-2 mt-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 col-md-10">
+					<div class="forgot">
+						<center>
+							<img alt="" src="https://img.freepik.com/free-vector/green-double-circle-check-mark_78370-1749.jpg?size=626&ext=jpg&ga=GA1.1.184332251.1700423792&semt=sph" height="250px" width="250px">	
+						<h1>Thank  You 	! </h1>
+						<hr>
+						<br>
+						<h3> Password Updated Successfully </h3>
+						</center>
+					</div>
+						
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'
+		src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'>
+	</script>
+
+</body>
+</html>

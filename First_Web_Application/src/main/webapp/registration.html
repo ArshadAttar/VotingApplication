@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style type="text/css">
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.sec{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  
+      background:#778899;
+}
+.container{
+    width: 800px;
+    display: flex;
+    max-width: 850px;
+    height:890px;
+   padding-top:50px;
+   margin-top:50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px white;
+     background:  #2F4F4F ; 
+   
+}
+
+.login{
+    width: 450px;
+}
+form{
+    width: 250px;
+    margin: 30px auto;
+     
+}
+h1{
+    
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+  	color: black;
+  	font-family: serif;
+  	 text-decoration: underline;	
+}
+h1:hover{
+	color: white;
+	text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5)
+}
+
+p{
+    text-align: center;
+    margin: 10px;
+}
+hr{
+    border-top: 3px solid black;
+    width: 450px;
+}
+
+.pic img{
+    width: 300px;
+    height: 650px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-top: 150px;
+}
+
+
+form label{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+}
+.lab{
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: tomato;
+}
+button:hover{
+    background-color: green;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+nav{
+  background: black;
+  height: 80px;
+  width: 100%;
+ 
+}
+.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+  font-family: serif;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #FF8C00;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+   font-weight: bolder;
+}
+a.active,a:hover{
+  background: #FFF8DC;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width:952px){
+  .logo{
+    font-size: 30px;
+    padding-left: 50px;
+ 
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+label{
+	color:white;
+}
+
+</style>
+</head>
+<body>
+<section class="sec">
+<nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+       <i class="fas fa-align-justify"></i>
+      </label>
+      <label class="logo">Voters Portal</label>
+      <ul>
+        <li><a href="index.html">Home Page</a></li>
+      </ul>
+    </nav>
+	
+	<div class="container">
+	
+		  <div class="pic">
+          		<img src="https://cdn.pixabay.com/photo/2022/05/26/22/08/satyamev-jayate-7223886_640.png">
+          </div>
+              
+	      <div class="login">
+	        <h1>Registration Form</h1>
+	      		 <form action="registerLink1" method="post" onsubmit="return validateForm()">
+	                  <label >Enter Name</label>
+	        		  <input type="text" name="name" id="name" class="lab" required	>
+	        		  
+	        		  <label>Enter Email</label>
+	                  <input type="email" name="email" class="lab" id="email" required>
+	                  
+	                  <label >Enter Contact Number </label>
+	                  <input type="text" name="contact" class="lab" id="contact" required>
+	                  
+	                   <label>Gender </label> 
+	                  <input type="radio" name="gender" value="male" required> Male
+	                  <input type="radio" name="gender" value="female" required> Female
+	                  
+	                  
+	             
+	                  <label >Select State</label>
+	                  <select name="state" class="lab" id="state" required>
+	                        <option> </option>
+	                        <option value="Maharashtra">Maharashtra</option>
+	          			    <option value="karnatka">karnatka</option>
+	            			<option value="Goa">Goa</option>
+	            			<option value="Gujrat">Gujrat</option>
+	           			    <option value="Utar Pradesh">Utar Pradesh</option>
+	          			    <option value="Delehi">Delehi</option>
+	            		    <option value="Telangana">Telangana</option>
+	                        <option value="Tamil Nadu">Tamil Nadu</option>
+	                        <option value="ChhatisGad">ChhatisGad</option>
+	                        <option value="Manipur">Manipur</option>
+	                  </select>
+	                  
+	                  <label>Voter ID</label>
+	                  <select name="idprof"  class="lab" id="voterID" required>
+	                          <option> </option>
+	                          <option value="AdharCard">Aadhaar Card</option>
+	            			  <option value="pancard">Pan Card</option>
+	                          <option value="driving licencs">Driving License</option>
+	                           <option value="passPort">Pass Port</option>   
+	                  </select>
+	                  
+	                  <label>Enter Id Number</label>
+	                  <input type="text" name="IdNumber" placeholder="Enter Id Number"  class="lab" id="id_number" required>
+	            	   <label>Enter Password</label>
+	                  <input type="password" name="pass1" id="pass1" placeholder="Enter password"  class="lab" required>
+	                  <br>
+	                   <label>Enter Confirm Password</label>
+	                  <input type="password" name="pass2"  id="pass2" placeholder="Enter confirm password" class="lab" required>
+	                   <button>Submit</button>
+	                </form>
+	            </div>          
+	        </div>
+</section>
+<script type="text/javascript">
+
+	      function validateForm() {
+  		  var pass1 = document.getElementById("pass1");
+   		  var pass2 = document.getElementById("pass2");
+
+   		 if (pass1.value !=pass2.value) {
+        alert("Both  password are not same.");
+        return false;
+   		 }
+   		 return true;
+}
+	</script>
+</body>
+</html>

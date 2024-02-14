@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style type="text/css">
+
+nav{
+  background: black;
+  height: 80px;
+  width: 100%;
+}
+.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+  font-family: serif;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #FF8C00;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+   font-weight: bolder;
+}
+a.active,a:hover{
+  background: #FFF8DC;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width:952px){
+  .logo{
+    font-size: 30px;
+    padding-left: 50px;
+ 
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.sec{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background:#778899;
+    padding-top: 50px;
+    height: 89vh;
+}
+
+.container{
+	height:500px;
+    width:600px;
+    display: flex;
+    background:  #2F4F4F  ;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px white;
+}
+.lab{
+	color:white;
+}
+.login{
+    width: 500px;
+}
+form{
+    width: 250px;
+    margin: 60px auto;
+}
+h1{
+    margin: 20px;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: DarkOrange;	
+}
+
+p{
+    text-align: center;
+    margin: 10px;
+}
+hr{
+	width:250px;
+    border-top: 4px solid white;
+}
+
+.pic img{
+    width: 250px;
+    height: 500px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+     padding-right: 30px;
+    
+    
+}
+
+form label{
+  
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+}
+input{
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#btn1{
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #800000;
+}
+
+a{  
+    text-decoration: none;
+    color: #00008B;
+}
+ 
+
+
+	
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+<nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+       <i class="fas fa-align-justify"></i>
+      </label>
+      <label class="logo">Voters Portal</label>
+      <ul>
+        <li id="home"><a href="#">Home</a></li>
+        
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="Forgot.html">Forgot pass</a></li> 
+        <li><a href="index.html">Login</a></li>
+        <li><a href="registration.html">Sign Up</a></li>
+      </ul>
+    </nav>
+<section class="sec">
+<div class="container">
+            <div class="login">
+                <form action="loginlink1" method="post"  onsubmit="return validateForm()">
+                    <h1>Welcome </h1>
+                    <hr>
+                    <label class="lab">Email or Contact</label>
+                    <input type="text" name="email" id="email" placeholder="Enter here" required>
+                    <span class="emailText"></span>
+                    
+                    <label class="lab" >Password</label>
+                    <input type="password" name="pass" id="password" placeholder="Enter here" required>
+                    <span class="passText"></span>
+                    
+                    <input id="btn1" type="submit" value="Submit">
+                    <br>
+                    <br>
+                  <center><a href="Forgot.html" id="pass">Forgot Password ?</a></center>
+		                    <p class="lab">Don't have an account?<a href="registration.html"> Sign up</a> </p>	
+		                </form>
+		            </div>
+		            <div class="pic">
+		                <img src="https://cdn.pixabay.com/photo/2022/05/26/22/08/satyamev-jayate-7223886_640.png">
+		          </div>
+		  </div>
+</section>
+<script type="text/javascript">
+			history.pushState(null,null,location.href);
+			windows.onpopstate=function(){
+				history.go(1);
+			}
+
+	      function validateForm() {	
+  		  var email = document.getElementById("email").value;
+   		  var password = document.getElementById("password").value;
+
+   		 if (email === "" || password === "") {
+        alert("Please fill in both email and password.");
+        return false;
+   		 }
+   		 return true;
+        }
+</script>
+</body>
+</html>

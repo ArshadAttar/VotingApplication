@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Voting Application</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Times New Roman;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  	background-color: rgb(0, 128, 255);  
+}
+
+.container{	
+    width: 1100px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    height:500px;
+    padding-top:0px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hr{
+    border-top: 5px solid tomato;
+}
+
+form label{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+h1{
+    margin: 0px;
+    text-align: center;
+    font-weight: bolder;
+    padding-bottom:0px;
+    text-transform: uppercase;  
+}
+
+#btn{
+    border: 3px solid black;
+    padding: 10px;
+    width: 140px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 0px;
+    border-radius: 20px;
+    background: #000080;
+}
+
+#btn:hover{
+    background-color: #006400;
+}
+
+.logoname{
+	height: 200px;
+	width: 200px;
+	align-items: center;
+	justify-content: center;	
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+}
+
+img{
+	height: 250px;
+	width: 250px;
+}
+
+#img2,#img4{
+	height: 320px;
+	width: 270px;
+	padding-top: 25px;
+}
+
+#logoname4{
+	padding-bottom: 40px;
+}
+
+#logoname2{
+	height: 330px;
+}
+#mainlogoname{
+	height: 300px;
+	width: 1100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+</style>
+</head>
+<body>
+<div class="container">     
+			<center>                		
+				<h1>POLITICAL PARTIES</h1>
+				<hr>
+			</center>
+			<form action="votingLink" method="post" >
+			<div id="mainlogoname">
+				<div class="logoname">
+					<img src="https://seeklogo.com/images/B/BJP-logo-C3CCCD3D69-seeklogo.com.png">
+					<label for="BJP">BJP</label>
+					<input type="radio" id="bjp" name="voting" value="bjp" class="vote" required>
+				</div>
+				
+				<div class="logoname" id="logoname2">	
+					<img src="https://images.picxy.com/cache/2020/5/12/b5458d9ac500cd95a971eb0830688b0c.jpg" id="img2">
+					<label for="CONGRESS">CONGRESS</label>
+					<input type="radio" id="congress" name="voting" value="congress" class="vote" >
+				</div>		
+				
+				<div class="logoname">
+					<img src="https://i.pinimg.com/originals/27/f9/70/27f9706d7aef3db82e2e12c537561b2a.jpg">		  
+					<label for="NCP">NCP</label>
+					<input type="radio" id="ncp" name="voting" value="ncp" class="vote">
+				</div>
+				
+				<div class="logoname" id="logoname4">
+					<img src="https://pbs.twimg.com/media/B1ka_1zCUAESVq9.jpg" id="img4">
+				    <label for="NOA">NOA</label>
+				    <input type="radio" id="noa" name="voting" value="noa" class="vote">
+				</div>	  
+			</div>
+				<center><input type="Submit" value="Vote" id="btn"></center>
+		</form> 
+		
+	</div> 
+</body>
+</html>
